@@ -12,7 +12,11 @@ UrlName = sys.argv[1]
 reqCont = urllib2.Request(UrlName)
 
 #second open this object, it returns a file object
-retCont = urllib2.urlopen(reqCont)
+try:
+    retCont = urllib2.urlopen(reqCont)
+except urllib2.URLError, e:
+    print "Error data:", e
+    sys.exit(1)
 
 #third we get the content allready.wo just need print it
 print "Rev Content From URL:", retCont.geturl()
