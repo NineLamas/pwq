@@ -6,8 +6,8 @@ __author__ = 'xm'
 
 import urllib2
 
-#UrlName = sys.argv[1]
-UrlName = "http://www.baidu.com"
+UrlName = sys.argv[1]
+#UrlName = "http://www.baidu.com"
 #first we need create a object
 reqCont = urllib2.Request(UrlName)
 
